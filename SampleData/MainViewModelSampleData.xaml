@@ -1,0 +1,17 @@
+<local:MainViewModel 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Oktoberfest" 
+    >
+    
+    <local:MainViewModel.Greeting>
+        <local:ItemViewModel EnglishPhrase="Hello!"  />
+        <local:ItemViewModel EnglishPhrase="How are you?" />
+        <local:ItemViewModel EnglishPhrase="What is your name?" />
+        <local:ItemViewModel EnglishPhrase="My name is John!" />
+        <local:ItemViewModel EnglishPhrase="Where are you from?" />
+        
+        
+    </local:MainViewModel.Greeting>
+    
+</local:MainViewModel>

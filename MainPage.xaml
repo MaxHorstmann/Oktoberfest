@@ -1,0 +1,132 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Oktoberfest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800" 
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneChromeBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent" >
+ 
+        <!--Panorama control-->
+        <controls:Panorama Title="German for Oktoberfest" Name="panoramaControl" ManipulationStarted="panoramaControl_ManipulationStarted" Foreground="Black">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="PanoramaBackground.png" Opacity=".7"/>
+            </controls:Panorama.Background>
+ 
+            <controls:PanoramaItem Header="Greeting" Foreground="Red">
+                <!--Double line list with text wrapping-->
+                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Greeting}" FontSize="18" Foreground="Gold">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432">
+                                <Button Tag="{Binding Path=GermanPhrase}" Content="{Binding Path=EnglishPhrase}" Foreground="Gold" HorizontalAlignment="Left" FontSize="40" Click="Button_Click" BorderBrush="{x:Null}" Background="{x:Null}" ClickMode="Release" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="Drinking" Foreground="Red">
+                <!--Double line list with text wrapping-->
+                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Drinking}" FontSize="18" Foreground="Gold">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432">
+                                <Button Tag="{Binding Path=GermanPhrase}" Content="{Binding Path=EnglishPhrase}" Foreground="Gold" HorizontalAlignment="Left" FontSize="40" Click="Button_Click" BorderBrush="{x:Null}" Background="{x:Null}" ClickMode="Release" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="Eating" Foreground="Red">
+                <!--Double line list with text wrapping-->
+                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Eating}" FontSize="18" Foreground="Gold">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432">
+                                <Button Tag="{Binding Path=GermanPhrase}" Content="{Binding Path=EnglishPhrase}" Foreground="Gold" HorizontalAlignment="Left" FontSize="40" Click="Button_Click" BorderBrush="{x:Null}" Background="{x:Null}" ClickMode="Release" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+
+
+            <controls:PanoramaItem Header="Dancing" Foreground="Red">
+                <!--Double line list with text wrapping-->
+                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Dancing}" FontSize="18" Foreground="Gold">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432">
+                                <Button Tag="{Binding Path=GermanPhrase}" Content="{Binding Path=EnglishPhrase}" Foreground="Gold" HorizontalAlignment="Left" FontSize="40" Click="Button_Click" BorderBrush="{x:Null}" Background="{x:Null}" ClickMode="Release" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+
+
+            <controls:PanoramaItem Header="Flirting" Foreground="Red">
+                <!--Double line list with text wrapping-->
+                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Flirting}" FontSize="18" Foreground="Gold">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432">
+                                <Button Tag="{Binding Path=GermanPhrase}" Content="{Binding Path=EnglishPhrase}" Foreground="Gold" HorizontalAlignment="Left" FontSize="40" Click="Button_Click" BorderBrush="{x:Null}" Background="{x:Null}" ClickMode="Release" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+
+
+            <controls:PanoramaItem Header="Swearing" Foreground="Red">
+                <!--Double line list with text wrapping-->
+                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Swearing}" FontSize="18" Foreground="Gold">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432">
+                                <Button Tag="{Binding Path=GermanPhrase}" Content="{Binding Path=EnglishPhrase}" Foreground="Gold" HorizontalAlignment="Left" FontSize="40" Click="Button_Click" BorderBrush="{x:Null}" Background="{x:Null}" ClickMode="Release" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+
+
+            <controls:PanoramaItem Header="Leaving" Foreground="Red">
+                <!--Double line list with text wrapping-->
+                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Leaving}" FontSize="18" Foreground="Gold">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432">
+                                <Button Tag="{Binding Path=GermanPhrase}" Content="{Binding Path=EnglishPhrase}" Foreground="Gold" HorizontalAlignment="Left" FontSize="40" Click="Button_Click" BorderBrush="{x:Null}" Background="{x:Null}" ClickMode="Release" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+
+        </controls:Panorama>
+        <Border BorderBrush="Silver" BorderThickness="1" Height="800" HorizontalAlignment="Left" Name="border1" VerticalAlignment="Top" Width="480" Background="#FF80B5B5" Visibility="Collapsed">
+            <Canvas Background="Black" MouseLeftButtonDown="Canvas_MouseLeftButtonDown">
+                <TextBlock Height="800" Name="textBlock1" Text="TextBlock" HorizontalAlignment="Center" FontSize="70" Canvas.Left="6" Canvas.Top="-1" Width="466" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Foreground="Yellow" FontStretch="Normal" FontWeight="Normal" />
+            </Canvas>
+        </Border>
+    </Grid>
+ 
+    <!--Panorama-based applications should not show an ApplicationBar-->
+
+</phone:PhoneApplicationPage>
